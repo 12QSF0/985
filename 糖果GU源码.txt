@@ -1,0 +1,713 @@
+-- Gui to Lua LOLLYPOPHUB
+-- Version: 5.3
+-- toggle button added
+-- Instanxes:
+
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
+CoreGui:SetCore("SendNotification", {
+    Title = "曙光Hub",
+    Text = "加入游戏成功",
+    Duration = 8, 
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "made by:",  	
+Text = "曙光",
+	Icon = "rbxthumb://type=Asset&id=11425468695=150&h=150",
+	Duration = 5
+})
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("曙光 | HUB","BloodTheme")
+
+---//yum lollypop hub\\--
+-- LightTheme
+-- DarkTheme
+-- GrapeTheme
+-- BloodTheme
+-- Ocean
+-- Midnight
+-- Sentinel
+-- Synapse
+-- Serpent(new)
+--tools1134,skripts35,game1443
+
+--skripts tab
+local Skripts = Window:NewTab("脚本")
+local SkriptsSection = Skripts:NewSection("通用脚本")
+SkriptsSection:NewDropdown("更新:", "updates here", {"last updated: AUGUST 21, 2023", "Version: 5.3", "skripts added", "bug fixes", "some skripts dont work for SW iOS users"}, function(currentOption)
+    print(currentOption)
+end)
+
+-- SKRIPTS BUTTONS
+SkriptsSection:NewButton("99% 失败", "purple = ✅, red = ❌, green = ✅, tile broke, or 🔥 ", function()
+-- lulas 99 fail memory skript
+loadstring(game:HttpGet(('https://pastebin.com/raw/DhLMep63'),true))()
+end)
+--new toggle antimythikal
+SkriptsSection:NewToggle("神话 (99% fail)", "works 99% of the time", function(state)
+    if state then
+        local RunService = game:GetService("RunService")
+function antiSit()
+if game.Players.LocalPlayer.Character.Humanoid:GetState() == Enum.HumanoidStateType.Seated then 
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end
+end
+RunService:BindToRenderStep("tempBinding", 1000, antiSit)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Anti-Mythikal✅",  	
+Text = "no mythikals kan grab u now",
+	
+	Duration = 4
+})
+    else
+        local RunService = game:GetService("RunService")
+function antiSit()
+if game.Players.LocalPlayer.Character.Humanoid:GetState() == Enum.HumanoidStateType.Seated then 
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end
+end
+RunService:BindToRenderStep("tempBinding", 1000, antiSit)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Anti-Mythikal❌",  	
+Text = "mythikals kan now grab u",
+	
+	Duration = 4
+})
+    end
+end)
+--end toggle antimythikal
+
+SkriptsSection:NewButton("天堂地图(99% fail)", "reduxe lag too", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/RW7ZT29m"))()
+end)
+
+SkriptsSection:NewButton("通报", "will send u a notif if viet joins", function()
+-- be notified wen viet joins
+loadstring(game:HttpGet("https://pastebin.com/raw/C96cg2xG"))()
+end)
+
+SkriptsSection:NewButton("通报", "will notify u if kokushibo joins",
+function()-- kokushibo notifier
+loadstring(game:HttpGet("https://pastebin.com/raw/1hnL2uEj"))()
+end)
+
+
+local SkriptsSection = Skripts:NewSection("脚本")
+
+--infjump.Konnekt
+SkriptsSection:NewToggle("跳跃", "no jump limit", function(toggled)
+    if toggled then
+        getgenv().InfJump = true
+        spawn(function()
+            while getgenv().InfJump == true do
+                game:GetService("UserInputService").JumpRequest:connect(function()
+                    if getgenv().InfJump == true then
+                        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+                    end
+                end)
+                wait()
+            end
+        end)
+    else
+        getgenv().InfJump = false
+    end
+end)
+--infjump.Diskonnekt
+
+SkriptsSection:NewButton("自瞄(R6)", "simple aimbot skript by me", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-AIMBOT-SKRIPT-6783"))()
+end)
+
+SkriptsSection:NewButton("自瞄V2", "aimbot", function()
+    
+    -- aimbot print 
+loadstring(game:HttpGet("https://pastebin.com/raw/i9QLTtbD"))()
+end)
+
+-- superhuman
+SkriptsSection:NewToggle("超人", "boosts jumppower and speed", function(state)
+        if state then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+        else
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        end
+    end)
+
+SkriptsSection:NewToggle("坐下", "sit/unsit", function(state)
+    if state then
+        -- sitTrue
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+    else
+        -- sitFalse
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+    end
+end)
+
+SkriptsSection:NewButton("99%不可能", "for 99% fail impossible obby",
+function()local ohInstance1 = game.Players.LocalPlayer.Character.Humanoid
+
+game:GetService("ReplicatedStorage").OnRagdoll:FireServer(ohInstance1)
+end)
+
+SkriptsSection:NewButton("从消息中执行脚本", "exekute a skript frm msg box",
+function()loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/chat-executor/main/chat-executor",true))()
+end)
+
+SkriptsSection:NewButton("RK", "ty to me😍🍭", function()
+-- F9/ Generated konsole
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("LULASLOLLIPOP THE BEST🍭💓🍭💓","All")
+end)
+
+SkriptsSection:NewButton("减少滞后", "FX remover", function()
+for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+        v.Material = Enum.Material.SmoothPlastic
+        if v:IsA("Texture") then
+            v:Destroy()
+        end
+    end
+end	
+end)
+
+SkriptsSection:NewButton("防AFK", "afk limit bypass", function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(50,205,50)
+
+Library:Notification({
+    Text = "now they kant stop u😴",
+    Duration = 5
+})
+    --end notif
+-- anti afk
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+
+SkriptsSection:NewButton("加速GUI", "+ -", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/2gGvc9ya"))()
+end)
+
+SkriptsSection:NewButton("切换器", "yellow grey", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/djAd7g2W'))()
+end)
+
+SkriptsSection:NewButton("R6爬墙", "klimb on any walls", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/jLVhHEVW'))()
+end)
+
+SkriptsSection:NewButton("拖拽&调整信息框", "lets u kontrol the xhat drag and size it", function()
+-- drag &resize xhat
+loadstring(game:HttpGet("https://pastebin.com/raw/e3KhdyYS"))()
+end)
+
+SkriptsSection:NewButton("在墙上走路 (R15和R6)", "w.o.w", function()
+-- walk on walls
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/RY9cBbdG"))()
+end)
+
+SkriptsSection:NewButton("飞行脚本V2", "mobile fly gui",
+function()-- arkeus fly mobile
+loadstring(game:HttpGet("https://pastebin.com/raw/Kq7cPe3C"))()
+end)
+
+SkriptsSection:NewButton("手机飞行 作者:BW", "modded",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/TeNifRrX"))()
+end)
+
+SkriptsSection:NewButton("手机飞行管理", "mobile fly HD ADMIN version",
+function()-- FLY HD ADMIN
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Ignore-00000/main/Ignore"))()
+end)
+
+SkriptsSection:NewButton("手机通用飞行", "speed setter",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/YvKv4AuY"))()
+end)
+
+SkriptsSection:NewButton("移动Shiftloxk", "shift loxk button",
+function()--shiftloxk
+loadstring(game:HttpGet("https://pastebin.com/raw/uqAS6EfN"))()
+end)
+
+SkriptsSection:NewButton("传送玩家GUI", "V2",
+function()loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
+end)
+
+SkriptsSection:NewButton("滞后开关 V2", "might inkrease FX too,🛜",
+function()loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Protected - 2023-05-28T225112.055.lua.txt'),true))()
+end)
+
+SkriptsSection:NewButton("翻译消息", "type >(language)",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/8PRDbzXG"))()
+end)
+
+SkriptsSection:NewButton("键盘", "its a mobile keyboard",
+function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+SkriptsSection:NewButton("按键V2", "WASD and spaxe keys",
+function()-- KEYSTROKES GUI V2 
+loadstring(game:HttpGet(('https://pastefy.app/Te4dwSw2/raw'),true))()
+end)
+
+--[[
+    {"Esc", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"},
+    {"~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="},
+    {"Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]"},
+    {"CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "\\"},
+    {"Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/"},
+    {"Ctrl", "Win", "Alt", "Space", "Alt", "Menu", "Ctrl"}
+]]
+
+SkriptsSection:NewButton("按键绑定生成器", "keyboard letters generator (useful)",
+function()
+    loadstring(game:HttpGet(('https://pastefy.app/Ujm4HWxh/raw'),true))()
+end)
+
+SkriptsSection:NewButton("按键绑定生成器V2", "keyboard letters generator (useful)",
+function()
+    -- keybind generator v2
+loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
+end)
+
+SkriptsSection:NewButton("鼠标", "gives u a mouse kursor touxh",
+function()
+    loadstring(game:HttpGet(('https://pastefy.app/58d8d52G/raw'),true))()
+end)
+
+SkriptsSection:NewButton("上帝模式", "no death 99% fail and some obbys",
+function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant", true))()
+Library.DefaultColor = Color3.fromRGB(50,205,50)
+
+Library:Notification({
+    Text = "NIGGAMODE! jk godmode",
+    Duration = 5
+})
+    -- fe brixk toggle press Z 
+loadstring(game:HttpGet("https://pastebin.com/raw/6g3h9cDB"))()
+end)
+
+SkriptsSection:NewButton("上帝模式 V2", "no death 99% fail and survive kill brixks",
+function()-- fe brixk toggle 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))()
+end)
+
+SkriptsSection:NewButton("快速动画", "player animation will be sped up",
+function()-- FAST animations
+loadstring(game:HttpGet("https://scriptblox.com/raw/Fast-Animation-FE_744"))()
+end)
+
+SkriptsSection:NewButton("老动画", "r6 only",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/0ZPiK5ci"))()
+end)
+
+SkriptsSection:NewButton("更好的 ROBLOX", "red roblox w stat info",
+function()loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
+end)
+
+SkriptsSection:NewButton("2016版 UI(卡屏)", "old ui",
+function()loadstring(game:HttpGet('https://raw.githubusercontent.com/kosuke14/REBOYHub/main/games/2016_Roblox.lua'))()
+end)
+
+SkriptsSection:NewButton("彩虹地图", " ",
+function()--RAINBOW MAP 
+while true do
+    for _, part in ipairs(workspace:GetDescendants()) do
+        if part:IsA("BasePart") then
+            local r = math.random()
+            local g = math.random()
+            local b = math.random()
+            part.BrickColor = BrickColor.new(Color3.new(r, g, b))
+        end
+    end
+    wait(0.5)
+end
+end)
+
+SkriptsSection:NewButton("保存传送位置", "stand where u want and push add",
+function()loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Tp%20Place%20GUI'),true))()
+end)
+
+SkriptsSection:NewButton("CCTV", "spy",
+function()loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+end)
+
+SkriptsSection:NewButton("切换隐身", " ",
+function()-- toggle invisibility
+loadstring(game:HttpGet("https://pastebin.com/raw/HrbT6bNK",true))()
+end)
+
+SkriptsSection:NewButton("冻结POV相机", "pov freeze",
+function()loadstring(game:HttpGet('https://pastebin.com/raw/T0S0RPTW'))()
+end)
+
+SkriptsSection:NewButton("OP", "better skreen",
+function()local camera = workspace.CurrentCamera
+local settings = {
+    ["Aspect Ratio"] = true, --// leave it like this if i don't know what You're doing
+    ["Ratio Value"] = 0.6 --// leave it like this if i don't know what You're doing
+}
+
+local oldNewindex
+
+oldNewindex = hookmetamethod(game, "__newindex", function(object, propertyName, propertyValue)
+    if object == camera and propertyName == "CFrame" then
+        if settings["Aspect Ratio"] then
+            propertyValue = propertyValue * CFrame.new(0, 0, 0, 1, 0, 0, 0, settings["Ratio Value"], 0, 0, 0, 1)
+        end
+    end
+    return oldNewindex(object, propertyName, propertyValue)
+end)
+end)
+
+SkriptsSection:NewButton("永无止境Bloxk生成器", "good for lagging servers",
+function()local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local part = Instance.new("Part")
+part.BrickColor = BrickColor.new("Bright blue")
+part.Size = Vector3.new(5, 5, 5)
+
+while true do
+    local position = character.PrimaryPart.Position
+    local randomOffset = Vector3.new(math.random(-10, 10), math.random(-10, 10), math.random(-10, 10))
+    part:Clone().Parent = workspace
+    part.Position = position + randomOffset
+    wait(0.1) -- Adjust the delay between spawns as desired
+end
+end)
+
+SkriptsSection:NewButton("免费R15表情", "new&old emotes 2017-23",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+end)
+
+SkriptsSection:NewButton("击杀消息提示", "prints a huge text msg",
+function()game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(" ⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻", "All")
+end)
+
+SkriptsSection:NewButton("跑酷", "no speed limit,FOV & speed",
+function()-- fe parkour 
+loadstring(game:HttpGet("https://pastebin.com/raw/R5YR13pG"))()
+end)
+
+SkriptsSection:NewButton("R15到R6", "only work if u are r15",
+function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua", true))()
+end)
+
+SkriptsSection:NewButton("没有", "go thru walls",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/3wf2wpBW"))()
+end)
+
+SkriptsSection:NewButton("斯皮克太特", "spektate players",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/daM0ut53"))()
+end)
+
+SkriptsSection:NewButton("GreenSkreengui", "not fe but perfekt for videos", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Green%20Screen'))()
+end)
+
+local SkriptsSection = Skripts:NewSection("透视")
+
+SkriptsSection:NewButton("方框透视", "shows all usernames and esp",
+function()-- ESP PIXELGAME
+loadstring(game:HttpGet("https://paste.gg/p/anonymous/7259b0557ebf44ccabf2f7b58dc79899/files/0475cb5d744642a2b572e3a8af205588/raw"))()
+end)
+
+SkriptsSection:NewButton("透视用户名", "shows all usernames and esp",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/hpMC6ULU"))()
+end)
+
+SkriptsSection:NewButton("人物黑色", "see players thru walls but shadows",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/QQqiFGTE"))()
+end)
+
+SkriptsSection:NewButton("人物紫色", "see players highlighted purple",
+function()loadstring(game:HttpGet("https://pastebin.com/raw/7K1Jhmck"))()
+end)
+
+local SkriptsSection = Skripts:NewSection("执行器")
+
+-- exekutors below label
+SkriptsSection:NewButton("Arkeus X 执行器", "android exekutor works for ios",
+function()loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+end)
+
+SkriptsSection:NewButton("KRNL 执行器", "an exekutor",
+function()loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/Chillz-s-scripts/main/KRNL%20UI%20Remake.lua"))()
+end)
+
+SkriptsSection:NewButton("海王星执行器", "an exekutor",
+function()-- neptune exe
+loadstring(game:HttpGet('https://pastebin.com/raw/y3jhxS5r'))()
+end)
+
+local SkriptsSection = Skripts:NewSection("R15 动画")
+
+SkriptsSection:NewButton("僵尸", "R15 animation", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+    end
+end
+end)
+SkriptsSection:NewButton("卡通", "R15 animation", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=742637544"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=742638445"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=742640026"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=742638842"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=742637942"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=742636889"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=742637151"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+    end
+end
+end)
+
+SkriptsSection:NewButton("宇航员", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=891621366"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=891633237"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=891667138"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+     end
+end
+end)
+
+SkriptsSection:NewButton("泡泡", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=910004836"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=910009958"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=910034870"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=910025107"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=910016857"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=910001910"
+Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=910030921"
+Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=910028158"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+     end
+end
+end)
+
+SkriptsSection:NewButton("长老", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=845400520"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=845403856"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=845386501"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=845398858"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=845392038"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=845396048"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end) 
+
+SkriptsSection:NewButton("骑士", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616008087"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616010382"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616008936"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616003713"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616005863"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end 
+end)
+
+SkriptsSection:NewButton("悬浮", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=750781874"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=750782770"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=750785693"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=750783738"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=750782230"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=750779899"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=750780242"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+
+SkriptsSection:NewButton("马吉", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=707742142"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=707855907"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=707897309"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=707861613"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=707853694"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=707826056"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+SkriptsSection:NewButton("Ninja", "lokal skripts", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+
+SkriptsSection:NewButton("海盗", "lokal skripts", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=750781874"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=750782770"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=750785693"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=750783738"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=750782230"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=750779899"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=750780242"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+
+SkriptsSection:NewButton("机器人", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616088211"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616089559"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616095330"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616091570"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616090535"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616086039"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616087089"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+
+SkriptsSection:NewButton("时髦", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616136790"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616138447"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616146177"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616140816"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616139451"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616133594"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616134815"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+
+SkriptsSection:NewButton("超级英雄", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616111295"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616113536"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616122287"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616117076"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616115533"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616104706"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616108001"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end 
+end 
+end)
+
+SkriptsSection:NewButton("托尼", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=782843345"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=782847020"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=782843869"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=782846423"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+end
+end
+end)
+
+SkriptsSection:NewButton("吸血鬼", "lokal skript", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1083445855"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=1083450166"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=1083473930"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1083462077"
+Animate.jump.JumpAnim.AnimationId = "htt
